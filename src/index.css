@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "./styles/theme.css";
+@import "./styles/global.css";
+@import "./styles/shared.css";
+@import "./styles/layout.css";
+@import "./features/setup/setup.css";
+@import "./features/profiles/profiles.css";
+@import "./features/dartboard/dartboard.css";
+@import "./features/match/match.css";
+@import "./features/history/history.css";
+@import "./features/voice/voice.css";

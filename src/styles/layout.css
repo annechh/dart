@@ -1,0 +1,119 @@
+.app-shell {
+  max-width: 1320px;
+  padding: 0 40px;
+  margin: auto;
+}
+
+.topbar {
+  min-height: 80px;
+  padding: 5px 0;
+  border-bottom: 1px solid #1f1e22;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  font-family: "Host Grotesk", Inter, "Segoe UI", sans-serif;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+
+.brand-wordmark {
+  color: #e87de5;
+  font-family: "Holtwood One SC", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topbar .header-actions button {
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 100px;
+  background: #303030;
+  color: white;
+  font-weight: 500;
+  letter-spacing: .8px;
+  box-shadow: inset 0 0 7.3px 6px rgb(0 0 0 / 25%);
+}
+
+.topbar .header-actions button[aria-pressed="true"] {
+  background: #226510;
+}
+
+.topbar .header-actions .new-game {
+  background: #e87de5;
+  color: #181818;
+}
+
+.match-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 36px 0 28px;
+}
+
+.play-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.3fr) minmax(340px,1fr);
+  gap: 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 36px 0 24px;
+  font-size: 10px;
+  color: #70818f;
+  letter-spacing: 1px;
+}
+
+footer span {
+  letter-spacing: 0;
+}
+
+@media (max-width:850px) {
+  .app-shell {
+    padding: 0 20px;
+  }
+  .play-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:580px) {
+  .app-shell {
+    padding: 0 14px;
+  }
+  .topbar {
+    padding: 10px 0;
+  }
+  .topbar .header-actions button {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .match-heading {
+    align-items: flex-start;
+  }
+  .match-heading .secondary {
+    padding: 10px;
+    white-space: nowrap;
+  }
+  footer {
+    gap: 20px;
+  }
+}
+

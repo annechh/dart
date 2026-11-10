@@ -1,0 +1,100 @@
+.setup {
+  max-width: 550px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.setup>p.muted {
+  margin: 16px 0 30px;
+}
+
+.setup-form {
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.player-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.player-input label {
+  font-size: 12px;
+  color: #8191a0;
+}
+
+.add-player {
+  margin: 0 0 22px;
+}
+
+.setup-form select {
+  margin-bottom: 10px;
+}
+
+.start-button {
+  width: 100%;
+  margin-top: 28px;
+}
+
+@media (max-width:580px) {
+  .setup {
+    margin-top: 40px;
+  }
+}
+
+.match-options {
+  margin-top: 24px;
+}
+
+.match-options>label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  font-size: 13px;
+}
+
+.match-options input {
+  width: auto;
+}
+
+.bull-order {
+  text-align: left;
+}
+
+.bull-order>p {
+  margin: 16px 0;
+}
+
+.bull-distance {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.bull-distance strong {
+  flex: 1;
+}
+
+.bull-distance label {
+  width: 80px;
+  font-size: 12px;
+}
+
+.bull-distance input {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.finish-rule-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.finish-rule-buttons button {
+  flex: 1;
+}

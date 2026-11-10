@@ -1,0 +1,58 @@
+.board-wrap {
+  max-width: 520px;
+  margin: auto;
+}
+
+.board {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.board path,
+.board circle[role=button] {
+  cursor: crosshair;
+}
+
+.board path:hover,
+.board path:focus-visible,
+.board circle[role=button]:hover,
+.board circle[role=button]:focus-visible {
+  filter: brightness(1.5);
+  outline: none;
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.board-disabled path,
+.board-disabled circle[role=button] {
+  cursor: default;
+  filter: none;
+}
+
+.board-caption {
+  text-align: center;
+  font-size: 12px;
+  color: #9cabba;
+  padding: 16px 0 4px;
+  min-height: 38px;
+}
+
+@media (max-width:850px) {
+  .board-wrap {
+    max-width: 470px;
+  }
+}
+
+.board .miss-zone:hover,
+.board .miss-zone:focus-visible {
+  fill: #18222e;
+  filter: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.board-disabled .miss-zone:hover {
+  fill: #05080c;
+  stroke: #40505e;
+}

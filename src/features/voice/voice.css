@@ -1,0 +1,62 @@
+.voice-input {
+  border-bottom: 1px solid #30404e;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.voice-input .section-title {
+  margin-bottom: 12px;
+}
+
+.voice-input h2 {
+  font-size: 13px;
+}
+
+.voice-input button {
+  font-size: 11px;
+  padding: 10px;
+}
+
+.voice-input p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.mic-log {
+  margin-top: 16px;
+  border-top: 1px solid #344452;
+  padding-top: 14px;
+}
+
+.mic-log summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.mic-log-entries {
+  max-height: 320px;
+  overflow: auto;
+  margin-top: 14px;
+}
+
+.mic-log-entries article {
+  padding: 12px 0;
+  border-top: 1px solid #293b47;
+  overflow-wrap: anywhere;
+}
+
+.mic-log-entries time {
+  font-size: 10px;
+  color: #94a5b4;
+}
+
+.mic-log-entries p {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.mic-log-entries small {
+  font-size: 11px;
+  color: #a7bd9c;
+}

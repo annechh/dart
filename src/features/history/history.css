@@ -1,0 +1,69 @@
+.saved-game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #2b3946;
+}
+
+.saved-game p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.saved-game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.history-player-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-review {
+  margin-top: 24px;
+  background: #0c151e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.game-review h2 {
+  margin-bottom: 20px;
+}
+
+.game-review table {
+  margin-bottom: 24px;
+}
+
+.empty-history {
+  padding-top: 24px;
+}
+
+@media (max-width: 580px) {
+  .saved-game {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.history-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.history-player {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+
+.history-player .profile-avatar {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
