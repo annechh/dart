@@ -8,9 +8,48 @@
   margin: 16px 0 30px;
 }
 
+.setup-wide {
+  max-width: 1100px;
+}
+
+.setup-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.setup-columns > .panel {
+  background: transparent;
+}
+
 .setup-form {
   text-align: left;
-  margin-bottom: 22px;
+}
+
+.player-lineup {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 20px;
+}
+
+.player-lineup li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 850px) {
+  .setup-wide {
+    max-width: 550px;
+  }
+
+  .setup-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 .player-input {
@@ -97,4 +136,95 @@
 
 .finish-rule-buttons button {
   flex: 1;
+}
+
+.setup-choices {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.setup-choices label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 32px;
+  cursor: pointer;
+}
+
+.setup-choices input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.choice-track {
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 100px;
+  background: var(--button-background);
+}
+
+.choice-track span {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  color: transparent;
+  font-size: 12px;
+}
+
+.setup-choices input:checked + .choice-track span {
+  transform: translateX(20px);
+  background: var(--accent);
+  color: var(--page-background);
+}
+
+.setup-choices input:focus-visible + .choice-track {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .choice-track span {
+    transition: transform .18s ease, background .18s ease, color .18s ease;
+  }
+}
+
+.finish-rule-buttons button[aria-pressed="true"] {
+  background: #226510;
+  border-color: #226510;
+  color: #fff;
+}
+
+.setup-form .finish-rule-buttons button,
+.setup-form .start-button {
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 100px;
+  background: #303030;
+  color: white;
+  font-family: "Host Grotesk", Inter, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .8px;
+  box-shadow: inset 0 0 7.3px 6px rgb(0 0 0 / 25%);
+}
+
+.setup-form .finish-rule-buttons button[aria-pressed="true"],
+.setup-form .start-button,
+.setup-form .start-button:hover:enabled {
+  background: #226510;
+}
+
+.setup-form .finish-rule-buttons button[aria-pressed="false"]:hover:enabled {
+  background: #3a3a3a;
 }

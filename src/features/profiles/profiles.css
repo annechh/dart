@@ -1,4 +1,5 @@
 .profiles {
+  container-type: inline-size;
   text-align: left;
   margin-bottom: 24px;
 }
@@ -71,13 +72,29 @@
   gap: 8px;
 }
 
+.profile-dialog {
+  width: min(440px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  margin: auto;
+  overflow: auto;
+  color: inherit;
+}
+
+.profile-dialog::backdrop {
+  background: rgb(0 0 0 / 65%);
+}
+
+.profile-dialog form {
+  margin: 16px 0;
+}
+
 .profiles-table th:first-child {
   width: 65%;
 }
 
 .profile-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin: 18px 0 24px;
 }
@@ -88,7 +105,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 0;
-  width: 156px;
+  width: 100%;
   min-height: 100px;
   padding: 8px 0 4px;
   background: #181818;
@@ -140,11 +157,40 @@
 }
 
 .profile-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  position: relative;
 }
 
-.profile-item>.secondary {
-  padding: 7px 12px;
+.profile-edit {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #e87de5;
+}
+
+.profile-edit:hover:not(:disabled) {
+  background: #292029;
+}
+
+.profile-edit:focus-visible {
+  outline: 2px solid currentColor;
+}
+
+@container (min-width: 420px) {
+  .profile-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@container (min-width: 570px) {
+  .profile-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

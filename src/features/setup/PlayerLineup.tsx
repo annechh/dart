@@ -1,4 +1,4 @@
-import ProfileCard from '../profiles/ProfileCard';
+import HistoryPlayer from '../history/HistoryPlayer';
 import { loadProfiles } from '../profiles/profileStorage';
 export default function PlayerLineup({
   names,
@@ -8,5 +8,8 @@ export default function PlayerLineup({
   onRemove: (name: string) => void;
 }) {
   const profiles = loadProfiles();
-  return <div className="profile-grid" aria-label="Players added to play">{names.map(name => <ProfileCard key={name} name={name} image={profiles.find(profile => profile.name === name)?.image} onClick={() => onRemove(name)} remove />)}</div>;
+  return <ul className="player-lineup" aria-label="Players added to play">{names.map(name => <li key={name}>
+    <HistoryPlayer name={name} image={profiles.find(profile => profile.name === name)?.image} />
+    <button type="button" className="text-button" aria-label={`Remove ${name} from lineup`} onClick={() => onRemove(name)}>Remove</button>
+  </li>)}</ul>;
 }

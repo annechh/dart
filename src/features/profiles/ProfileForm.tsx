@@ -68,9 +68,8 @@ export default function ProfileForm({
     setError('');
     onClose();
   }}>
-    <h3>{editingId ? 'Edit profile' : 'Add profile'}</h3>
     <label htmlFor="profile-name">Name</label>
-    <input id="profile-name" required maxLength={30} value={name} onChange={e => setName(e.target.value)} />
+    <input id="profile-name" autoFocus required maxLength={30} value={name} onChange={e => setName(e.target.value)} />
     <span id="profile-photo-label">Photo (optional)</span>
     <div className="profile-photo-options" role="group" aria-labelledby="profile-photo-label">{([['upload', 'From computer'], ['link', 'Image link']] as const).map(([source, label]) => <button key={source} type="button" className={photoSource === source ? 'primary' : 'secondary'} aria-pressed={photoSource === source} disabled={busy} onClick={() => {
       setPhotoSource(source);
